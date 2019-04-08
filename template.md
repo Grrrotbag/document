@@ -1,5 +1,3 @@
-\newpage
-
 # Overview
 
 This project serves as a template to be used for creating documents. It's for my own personal use, including styling that I prefer, but anyone is free to use this. Whatever the least restrictive terms available are---that's what this repository is covered by. Fill your boots.

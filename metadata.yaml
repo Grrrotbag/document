@@ -25,3 +25,5 @@ include-before:
 # Puts the table of contents / list of tables on a separate page from the title page
 - '`\newpage{}`{=latex}'
 ---
+
+\newpage
