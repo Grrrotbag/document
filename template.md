@@ -61,8 +61,8 @@ include-before:
 The fonts used by the document are controlloed by the following variables:
 
 ```YAML
-mainfont: "Palatino"
-sansfont: "Helvetica"
+mainfont: "Hoefler Text"
+sansfont: "Helvetica Neue"
 monofont: "Fira Code"
 ```
 

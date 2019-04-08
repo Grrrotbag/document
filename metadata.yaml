@@ -5,7 +5,7 @@ date: \today
 lot: false
 toc: true
 lof: false
-mainfont: "Palatino"
+mainfont: "Hoefler Text"
 sansfont: "Helvetica Neue"
 monofont: "Fira Code"
 fontsize: 12pt
