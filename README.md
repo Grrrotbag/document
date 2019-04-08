@@ -4,8 +4,8 @@ This project serves as a template to be used for creating documents. It's for my
 
 ## Requirements
 
-- Pandoc --- [Link](https://pandoc.org/)
-- \LaTeX\ --- [Link](https://www.latex-project.org/) to visit the website. Specifically, I am using `xelatex` as the pdf-engine to use system fonts.
+- [Pandoc](https://pandoc.org/)
+- [LaTeX](https://www.latex-project.org/) to visit the website. Specifically, I am using `xelatex` as the pdf-engine to use system fonts.
 
 ## Outline
 
