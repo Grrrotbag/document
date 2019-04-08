@@ -16,3 +16,5 @@ The beauty of this setup is that, thanks to pandoc, you can use Markdown and LaT
 ## Usage
 
 Clone this repository. Write whatever you want in `template.md`. Run `make` in the command line. Your file will be created at `output.pdf`.
+
+![preview](preview.png)
