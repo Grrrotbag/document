@@ -13,14 +13,19 @@ colorlinks: true
 links-as-notes: true
 geometry: [top=3cm, bottom=3cm, left=3cm, right=3cm]
 header-includes:
-  # Setting The Title Styling to Gill Sans
+  # Font setup
   - \newfontfamily\headingfont[]{Gill Sans}
+  - \newfontfamily\dropcapfont[]{Helvetica}
+  # Setting The Title Styling to Gill Sans
   - \usepackage{titling}
   - \pretitle{\begin{center}\headingfont\Huge\MakeUppercase}
   - \posttitle{\end{center}\vspace{2em}}
   # Setting the section heading styling to Helvetica
   - \usepackage{sectsty}
   - \allsectionsfont{\sffamily}
+  # For Drop Caps / Lettrines
+  - \usepackage{lettrine}
+  - \renewcommand{\LettrineFontHook}{\dropcapfont}  # {\color{BrickRed}\headingfont}
 include-before:
 # Puts the table of contents / list of tables on a separate page from the title page
 - '`\newpage{}`{=latex}'

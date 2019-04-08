@@ -1,6 +1,4 @@
-# Overview
-
-This project serves as a template to be used for creating documents. It's for my own personal use, including styling that I prefer, but anyone is free to use this. Whatever the least restrictive terms available are---that's what this repository is covered by. Fill your boots.
+\lettrine[lines=3, nindent=0em]{T} his [project serves as a template]{.smallcaps} to be used for creating documents. It's for my own personal use, including styling that I prefer, but anyone is free to use this. Whatever the least restrictive terms available are---that's what this repository is covered by. Fill your boots.
 
 ## Requirements
 
@@ -15,7 +13,7 @@ The beauty of this setup is that, thanks to pandoc, you can use Markdown and \La
 
 # Usage
 
-There is a separate `YAML` file called `metadata.yaml` which contains a few variables. There are a few obvious ones, such as:
+\lettrine[lines=3, nindent=0em]{T} here [is a]{.smallcaps} separate `YAML` file called `metadata.yaml` which contains a few variables. You should check this first. You can leave it alone if you want obviously. Afterwards, simply write in `template.md` whatever it is you want to write. Then, run `make` in your command line and---hey presto---you will find a file called `output.pdf` in the same folder.
 
 ## Document Metadata
 
