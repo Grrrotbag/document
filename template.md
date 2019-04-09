@@ -2,14 +2,16 @@
 
 ## Requirements
 
-- Pandoc --- [Link](https://pandoc.org/)
-- \LaTeX\ --- [Link](https://www.latex-project.org/) to visit the website. Specifically, I am using `xelatex` as the pdf-engine to use system fonts.
+- [Pandoc](https://pandoc.org/)
+- \LaTeX\ [](https://www.latex-project.org/) Specifically, I am using [xelatex]{.smallcaps} as the pdf-engine to use system fonts.
 
 ## Outline
 
 You can overwrite the text in this document using [Markdown](https://daringfireball.net/projects/markdown/), which is extremely simple. View the documentation for more detail on how to use Markdown.
 
 The beauty of this setup is that, thanks to pandoc, you can use Markdown and \LaTeX\ in the same document to produce beautiful documents incredibly easily.
+
+---
 
 \lettrine[lines=3, nindent=0em]{Y} o[u should check out the metadata first]{.smallcaps}. There is a separate [yaml]{.smallcaps} file called [metadata.yaml]{.smallcaps} which contains a few variables. You can leave it alone if you want obviously. Afterwards, simply write in [template.md]{.smallcaps} whatever it is you want to write. Then, run [make]{.smallcaps} in your command line and---hey presto---you will find a file called [output.pdf]{.smallcaps} in the same folder.
 
@@ -62,7 +64,7 @@ sansfont: "Helvetica Neue"
 monofont: "Fira Code"
 ```
 
-[Mainfont]{.smallcaps} represents the body text of the document. [Sansfont]{.smallcaps} is used for the section headers throughout, and [monfont]{.smallcaps} is used for representing code, such as the blocks you can see in this section.
+[Mainfont]{.smallcaps} represents the body text of the document. [Sansfont]{.smallcaps} is used for the section headers throughout, and [monofont]{.smallcaps} is used for representing code, such as the blocks you can see in this section.
 
 You can use any font installed on your system for these.
 
@@ -98,7 +100,7 @@ header-includes:
   - \allsectionsfont{\sffamily}
   # For Drop Caps / Lettrines
   - \usepackage{lettrine}
-  - \renewcommand{\LettrineFontHook}{\dropcapfont\bfseries}  # {\color{BrickRed}\headingfont}
+  - \renewcommand{\LettrineFontHook}{\dropcapfont\bfseries}
   # Lorem Ipsum Generator for helping layout document
   - \usepackage{lipsum}
 ```
@@ -126,6 +128,18 @@ $$
 $$
 \frac{sales - costs}{costs} \times 100 = markup \%
 $$
+
+## Sections
+
+Sections are dealt with like this:
+
+```markdown
+# Section
+## Subsection
+### Subsubsection
+```
+
+And so on up to 6 levels deep.
 
 ## Lists
 
@@ -203,18 +217,24 @@ Table: Example Table
 ---------- ---------- ------------ ----
 556,415.42 701,645.04 (145,229.62)  -26
 
+\newpage
+
 ## Drop Caps & Lettrines
 
-Drop caps and lettrines are more complicated to use, as they are not covered by pandoc markdown. But since we are using \LaTeX\ to produce the pdf, we can use \LaTeX\ classes throughout our document. Consider the following:
+\lettrine[nindent=0em]{D} r[op caps and lettrines]{.smallcaps} are more complicated to use, as they are not covered by pandoc markdown. But since we are using \LaTeX\ to produce the pdf, we can use \LaTeX\ classes throughout our document. Consider the following:
 
 ```latex
-\lettrine[lines=9, findent=-3em, nindent=0.2em, slope=0.5em]{A} l[l your base are 
-belong to us]{.smallcaps}. \lipsum[1]
+\lettrine[lines=9, findent=-3em, nindent=0.2em, slope=0.5em]{A} l[l your base
+are belong to us]{.smallcaps}. \lipsum[1]
 ```
 
-This code specifies a *Drop Cap* 9 lines deep, with the first line brought closer to the letter by [-3em]{.smallcaps} and the following lines pushed away from the letter [0.2em]{.smallcaps}, sloping away by [0.5em]{.smallcaps}. Some *Lorem Ipusm* is generated to demonstrate. Like this:
+This code specifies a *Drop Cap* 9 lines deep, with the first line brought closer to the letter by [-3em]{.smallcaps} and the following lines pushed away from the letter [0.2em]{.smallcaps}, sloping away by [0.5em]{.smallcaps}. Some *Lorem Ipsum* is generated to demonstrate. Like this:
+
+---
 
 \lettrine[lines=9, findent=-3em, nindent=0.2em, slope=0.5em]{A} l[l your base are belong to us]{.smallcaps}. \lipsum[1]
+
+---
 
 Experiment away with this, as you have an extraordinary amount of control over the appearance of this, even without editing [metadata.yaml]{.smallcaps}. You can view the documentation for the `\lettrine` package [here](http://ctan.mirrors.hoobly.com/macros/latex/contrib/lettrine/doc/lettrine.pdf). Be warned though that not everything will necesarily work through pandoc, so test carefully. For instance, you are *supposed* to use it like this:
 
